@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int n,r,x,y,count=1,sum=0;
+	printf("enter n value:\n");
+	scanf("%d",&n);
+	printf("enter x value:\n");
+	scanf("%d",&x);
+	printf("enter y value:\n");
+	scanf("%d",&y);
+	while(n!=0)
+	{
+		r=n%10;
+		if(r==x)
+		{
+			r=y;
+		}
+		sum=sum+(r*count);
+		count=count*10;
+		n=n/10;
+	}
+	printf("%d",sum);
+}
