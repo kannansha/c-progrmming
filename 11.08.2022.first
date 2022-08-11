@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int subtractProductAndSum(int n) {
+        int t,r,p,sum=0,product=1,result;
+        scanf("%d",&n);
+        t=n;
+        while(n!=0)
+        {
+            r=n%10;
+            product*=r;
+            n=n/10;
+        }
+        while(t>0)
+        {
+            p=t%10;
+            sum+=p;
+            t=t/10;
+        }
+        result=product-sum;
+        printf("%d",result);
+        return result;
+    }
+};
