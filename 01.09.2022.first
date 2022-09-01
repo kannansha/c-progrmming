@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+	int x,ans;
+	printf("Enter any number:");
+	scanf("%d",&x);
+	ans=evenorodd(x);
+	if(ans==0)
+		printf("\nEVEN NUMBER");
+	else
+		printf("\nODD NUMBER");
+}
+int evenorodd(int x)
+{
+	if(x%2==0)
+		return(0);
+	else
+		return(1);
+}
