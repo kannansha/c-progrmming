@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+	int x,ans;
+	printf("Enter any number:");
+	scanf("%d",&x);
+	ans=factorial(x);
+	printf("\nfactorial of given number is %d",ans);
+}
+int factorial(int x)
+{
+	int i=1;
+	while(x>0)
+	{
+		i=i*x;
+		x--;
+	}
+	return(i);
+}
