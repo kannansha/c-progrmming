@@ -1,0 +1,22 @@
+#include<stdio.h>
+int josephus(int n,int k)
+{
+  int count=0;
+  if(n==1)
+      count=1;
+  else
+      count=(joseph(n-1,k)+(k-1))%n+1;
+  return count;
+}
+int main()
+{
+  int t;
+  scanf("%d",&t);
+  while(t--)
+  {
+      int n,k;
+      scanf("%d%d",&n,&k);
+      printf("%d\n",josephus(n,k));
+  }
+  return 0;
+}
